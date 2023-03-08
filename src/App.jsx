@@ -11,6 +11,7 @@ function App() {
 function BootstrapDetails() {
   let priceList = [
     {
+      id: 1,
       cost: "Free",
       rate: "$0/month",
       user: "✔ Single User",
@@ -23,6 +24,7 @@ function BootstrapDetails() {
       status: "✖ Monthly Status Report",
     },
     {
+      id: 2,
       cost: "Plus",
       rate: "$3/month",
       user: "✔ 5 User",
@@ -35,6 +37,7 @@ function BootstrapDetails() {
       status: "✖ Monthly Status Report",
     },
     {
+      id: 3,
       cost: "Pro",
       rate: "$5/month",
       user: "✔ Unlimited Users",
@@ -50,7 +53,7 @@ function BootstrapDetails() {
   return (
     <div className="mapping">
       {priceList.map((mv) => (
-        <Bootstrap priceList={mv} />
+        <Bootstrap key={mv.id} priceList={mv} />
       ))}
     </div>
   );
